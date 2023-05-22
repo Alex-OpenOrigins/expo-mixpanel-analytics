@@ -21,7 +21,7 @@ export class ExpoMixpanelAnalytics {
   screenSize?: string;
   deviceName?: string;
   platform?: string;
-  model?: string;
+  model?: string | null;
   osVersion: string | number;
   queue: any[];
   superProps: any = {};
@@ -44,8 +44,8 @@ export class ExpoMixpanelAnalytics {
       this.screenSize = `${width}x${height}`;
       this.deviceName = Constants.deviceName;
       if (isIosPlatform && Constants.platform && Constants.platform.ios) {
-        this.platform = Constants.platform.ios.platform ?? "";
-        this.model = Constants.platform.ios.model ?? "";
+        this.platform = Constants.platform.ios.platform;
+        this.model = Constants.platform.ios.model;
       } else {
         this.platform = "android";
       }

@@ -27,8 +27,8 @@ var ExpoMixpanelAnalytics = (function () {
             _this.screenSize = width + "x" + height;
             _this.deviceName = Constants.deviceName;
             if (isIosPlatform && Constants.platform && Constants.platform.ios) {
-                _this.platform = Constants.platform.ios.platform ?  ? "" :  : ;
-                _this.model = Constants.platform.ios.model ?  ? "" :  : ;
+                _this.platform = Constants.platform.ios.platform;
+                _this.model = Constants.platform.ios.model;
             }
             else {
                 _this.platform = "android";
