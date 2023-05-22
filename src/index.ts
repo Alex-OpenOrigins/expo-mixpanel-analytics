@@ -38,8 +38,8 @@ export class ExpoMixpanelAnalytics {
 
     Constants.getWebViewUserAgentAsync().then(userAgent => {
       this.userAgent = userAgent;
-      this.appName = Constants?.manifest?.name;
-      this.appId = Constants?.manifest?.slug;
+      this.appName = Constants.manifest.name;
+      this.appId = Constants.manifest.slug;
       this.appVersion = Constants?.manifest?.version;
       this.screenSize = `${width}x${height}`;
       this.deviceName = Constants.deviceName;

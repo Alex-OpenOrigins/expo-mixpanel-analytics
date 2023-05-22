@@ -21,8 +21,8 @@ var ExpoMixpanelAnalytics = (function () {
         this.superProps;
         Constants.getWebViewUserAgentAsync().then(function (userAgent) {
             _this.userAgent = userAgent;
-            _this.appName = Constants ? .manifest ? .name :  : ;
-            _this.appId = Constants ? .manifest ? .slug :  : ;
+            _this.appName = Constants.manifest.name;
+            _this.appId = Constants.manifest.slug;
             _this.appVersion = Constants ? .manifest ? .version :  : ;
             _this.screenSize = width + "x" + height;
             _this.deviceName = Constants.deviceName;
