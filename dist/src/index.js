@@ -1,5 +1,6 @@
 import * as tslib_1 from "tslib";
-import { Platform, Dimensions, AsyncStorage } from "react-native";
+import { Platform, Dimensions } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants from "expo-constants";
 import { Buffer } from "buffer";
 var _a = Dimensions.get("window"), width = _a.width, height = _a.height;
@@ -20,14 +21,14 @@ var ExpoMixpanelAnalytics = (function () {
         this.superProps;
         Constants.getWebViewUserAgentAsync().then(function (userAgent) {
             _this.userAgent = userAgent;
-            _this.appName = Constants.manifest.name;
-            _this.appId = Constants.manifest.slug;
-            _this.appVersion = Constants.manifest.version;
+            _this.appName = Constants ? .manifest ? .name :  : ;
+            _this.appId = Constants ? .manifest ? .slug :  : ;
+            _this.appVersion = Constants ? .manifest ? .version :  : ;
             _this.screenSize = width + "x" + height;
             _this.deviceName = Constants.deviceName;
             if (isIosPlatform && Constants.platform && Constants.platform.ios) {
-                _this.platform = Constants.platform.ios.platform;
-                _this.model = Constants.platform.ios.model;
+                _this.platform = Constants.platform.ios.platform ?  ? "" :  : ;
+                _this.model = Constants.platform.ios.model ?  ? "" :  : ;
             }
             else {
                 _this.platform = "android";
