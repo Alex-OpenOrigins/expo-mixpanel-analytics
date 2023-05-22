@@ -23,7 +23,7 @@ var ExpoMixpanelAnalytics = (function () {
             _this.userAgent = userAgent;
             _this.appName = Constants.manifest.name;
             _this.appId = Constants.manifest.slug;
-            _this.appVersion = Constants ? .manifest ? .version :  : ;
+            _this.appVersion = Constants.manifest.version;
             _this.screenSize = width + "x" + height;
             _this.deviceName = Constants.deviceName;
             if (isIosPlatform && Constants.platform && Constants.platform.ios) {

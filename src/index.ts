@@ -40,7 +40,7 @@ export class ExpoMixpanelAnalytics {
       this.userAgent = userAgent;
       this.appName = Constants.manifest.name;
       this.appId = Constants.manifest.slug;
-      this.appVersion = Constants?.manifest?.version;
+      this.appVersion = Constants.manifest.version;
       this.screenSize = `${width}x${height}`;
       this.deviceName = Constants.deviceName;
       if (isIosPlatform && Constants.platform && Constants.platform.ios) {
